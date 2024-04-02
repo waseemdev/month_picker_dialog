@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:month_picker_dialog/src/common.dart';
@@ -68,8 +67,8 @@ class YearSelectorState extends State<YearSelector> {
             ? Theme.of(context).colorScheme.secondary
             : null,
         foregroundColor: year == widget.initialDate!.year
-            ? Theme.of(context).textTheme.button!.color
-            : year == DateTime.now().year ? Theme.of(context).accentColor : null,
+            ? Theme.of(context).textTheme.labelLarge!.color
+            : year == DateTime.now().year ? Theme.of(context).colorScheme.secondary : null,
       ),
       child: Text(
         DateFormat.y(locale).format(DateTime(year)),

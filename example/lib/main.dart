@@ -44,7 +44,10 @@ class _MyAppState extends State<MyApp> {
         Locale("es"),
       ],
       theme: ThemeData(
-          primarySwatch: Colors.indigo, accentColor: Colors.pinkAccent),
+          primarySwatch: Colors.indigo,
+          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.pinkAccent),
+          // accentColor: Colors.pinkAccent,
+        ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Month Picker Example App'),
@@ -52,7 +55,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Text(
             'Year: ${selectedDate?.year}\nMonth: ${selectedDate?.month}',
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
         ),
